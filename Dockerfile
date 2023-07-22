@@ -5,7 +5,7 @@ RUN apt install git -y
 COPY requirements.txt /requirements.txt
 
 RUN cd /
-RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+RUN pip install -U -r requirements.txt
 RUN mkdir /ipgenbysatoru
 WORKDIR /ipgenbysatoru
-CMD ["python3", "bot.py"]
+CMD ["python", "bot.py"]
